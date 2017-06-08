@@ -24,6 +24,9 @@ datafiles="image-${arch}.tar.lzma sources.list"
 # Necessary development tool packages to be installed on build host
 devtools="debootstrap genisoimage p7zip-full squashfs-tools ubuntu-dev-tools"
 
+url_wallpaper="https://www.planwallpaper.com/static/images/sunset_scenery_nature_wallpaper_hd.jpg" #test url
+wget $url_wallpaper -P meilix-default-settings/usr/share/meilix/images
+
 # Make sure we have the data files we need
 for i in $datafiles
 do
