@@ -17,4 +17,8 @@ deploy:
   file: "/home/travis/${image_name}"
   on:
     branch: master
-
+    tags: true
+    
+notifications:
+  email:
+    - xeon.harsh@gmail.com
