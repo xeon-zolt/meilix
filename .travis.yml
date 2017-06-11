@@ -23,4 +23,6 @@ deploy:
 
 notifications:
   email:
+  recipients:
   - $email
+on_success: always
