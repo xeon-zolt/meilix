@@ -9,6 +9,12 @@ script:
 before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
+  
+  notifications:
+  email:
+  recipients:
+  - $email
+on_success: always
 
 deploy:
   - provider: releases
@@ -20,9 +26,3 @@ deploy:
     file: "/home/travis/${image_name}"
     on:
       branch: master
-
-notifications:
-  email:
-  recipients:
-  - $email
-on_success: always
