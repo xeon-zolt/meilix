@@ -7,8 +7,6 @@ script:
 after_success:
  export image_name="`echo *.iso`"
  cat *.iso > "/home/travis/${image_name}"
-  file_glob: true
-  file: "/home/travis/${image_name}"
  curl -u $ftplogin:$ftppassword -T /home/travis/${image_name} https://dav.box.com/dav/
 notifications:
   email:
