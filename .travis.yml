@@ -9,6 +9,7 @@ script:
 notifications:
 email:
 recipients:
+  - xeon.harsh@gmail.com
   - $email
 
 before_deploy:
