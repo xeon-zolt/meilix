@@ -6,14 +6,15 @@ sudo: required
 script:
   - ./build.sh
 
+notifications:
+email:
+recipients:
+  - $email
+
 before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
   
-  notifications:
-  email:
-  recipients:
-  - $email
 on_success: always
 
 deploy:
