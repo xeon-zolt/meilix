@@ -1,4 +1,5 @@
 # This provides us with GCC binary support so we can run bash
+dist: trusty
 language: generic
 
 sudo: required
