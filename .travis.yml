@@ -5,13 +5,11 @@ language: generic
 sudo: required
 
 script:
-  - ./build.sh
+  - ./build1.sh
 
 before_deploy:
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
-  - export email
-  - export mail_key
   
 on_success: always
 
