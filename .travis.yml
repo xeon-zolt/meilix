@@ -12,8 +12,7 @@ script:
   
 before_deploy:
   - cd extract-cd
-  - export image_name="`echo meilix-i386-custom.iso`"
-  - cat meilix-i386-custom.iso > "/home/travis/${image_name}"
+  - export image_name=$(ls extract-cd/meilix-i386-custom.iso)
   
 on_success: always
 
