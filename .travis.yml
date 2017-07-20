@@ -12,7 +12,7 @@ script:
 
 before_deploy:
   - ls
-  - sudo find . -type d -not -name '*iso' -print0 | xargs -0 rm --
+  - sudo rm -rf *.* !(meilix-zesty-20170611-i386.iso)
   - ls
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
