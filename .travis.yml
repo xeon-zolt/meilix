@@ -11,6 +11,8 @@ script:
   - ./build1.sh
   
 before_deploy:
+  - ls
+  - ls extract-cd/
   - export image_name=$(ls extract-cd/meilix-i386-custom.iso)
   
 on_success: always
