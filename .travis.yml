@@ -11,7 +11,7 @@ script:
   - ./build1.sh
 
 before_deploy:
-  - ls
+  - cd extract-cd
   - sudo rm -rf *.* !(meilix-zesty-20170611-i386.iso)
   - ls
   - export image_name="`echo *.iso`"
