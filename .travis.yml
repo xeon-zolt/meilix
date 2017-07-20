@@ -13,7 +13,8 @@ script:
 before_deploy:
   - ls
   - cd extract-cd
-  - sudo rm -rf *.* !(meilix-zesty-20170611-i386.iso)
+  - sudo rm -rf *.* !(meilix-i386-custom.iso)
+  - ls
   - export image_name="`echo *.iso`"
   - cat *.iso > "/home/travis/${image_name}"
   
