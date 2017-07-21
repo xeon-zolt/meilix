@@ -2,13 +2,14 @@
 #packages required to edit
 sudo apt-get install -qq squashfs-tools genisoimage
 #downloading the ISO to edit
-wget -q https://github.com/fossasia/meilix/releases/download/untagged-c9f68d2fa6b3d1cdbd99/meilix-zesty-20170611-i386.iso
+wget -q https://github.com/fossasia/meilix/releases/download/untagged-ef2fd636a53f4d0268cb/meilix-zesty-20170721-i386.iso
+mv *.iso meilix-original.iso
 #exit on any error
 set -e
 
 mkdir mnt
 #Mount the ISO 
-sudo mount -o loop meilix-zesty-20170611-i386.iso mnt/
+sudo mount -o loop meilix-original.iso mnt/
 #Extract .iso contents into dir 'extract-cd' 
 mkdir extract-cd
 sudo rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract-cd
@@ -24,6 +25,9 @@ sudo su <<EOF
 echo "$TRAVIS_SCRIPT" > edit/meilix-generator.sh
 EOF
 
+#moving browser script to edit
+mv browser.sh edit/browser.sh
+
 #prepare chroot
 sudo mount -o bind /run/ edit/run
 sudo cp /etc/hosts edit/etc/
@@ -33,10 +37,12 @@ sudo chroot edit <<EOF
 
 # execute environment variable
 ls # to test the files if any new file is added
-chmod +x meilix-generator.sh
+chmod +x meilix-generator.sh browser.sh
 echo "$(<meilix-generator.sh)" #to test the file
 ./meilix-generator.sh
 rm meilix-generator.sh
+./browser.sh
+rm browser.sh
 #delete temporary files 
 rm -rf /tmp/* ~/.bash_history
 exit
