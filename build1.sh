@@ -23,10 +23,10 @@ echo $TRAVIS_SCRIPT
 export $TRAVIS_SCRIPT
 sudo su <<EOF
 echo "$TRAVIS_SCRIPT" > edit/meilix-generator.sh
+mv browser.sh edit/browser.sh
 EOF
 
 #moving browser script to edit
-mv browser.sh edit/browser.sh
 
 #prepare chroot
 sudo mount -o bind /run/ edit/run
