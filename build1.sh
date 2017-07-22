@@ -41,6 +41,9 @@ chmod +x meilix-generator.sh browser.sh
 echo "$(<meilix-generator.sh)" #to test the file
 ./meilix-generator.sh
 rm meilix-generator.sh
+#test commands
+cat browser.sh
+#test end
 ./browser.sh
 rm browser.sh
 #delete temporary files 
