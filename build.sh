@@ -166,7 +166,7 @@ apt-get -q -y --purge install ttf-arphic-uming ttf-wqy-zenhei ttf-sazanami-minch
 apt-get -q -y --purge install language-pack-zh-hans language-pack-ja
 apt-get -q -y --purge install language-pack-gnome-en
 # Install ibus
-apt-get -q -y --purge install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
+apt-get -q -y --purge install ibus ibus-clutter ibus-qt4
 apt-get -q -y --purge install ibus-unikey ibus-anthy ibus-pinyin ibus-m17n
 apt-get -q -y --purge install im-switch
 
