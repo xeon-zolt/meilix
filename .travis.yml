@@ -1,0 +1,13 @@
+# This provides us with GCC binary support so we can run bash
+dist: trusty
+language: generic<number> commit message`
+
+
+git:
+  depth: 1
+
+sudo: required
+  
+script:
+  - ./build.sh 
+
