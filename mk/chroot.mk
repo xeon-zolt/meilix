@@ -156,7 +156,7 @@ $(BUILD)/pool: $(BUILD)/chroot
 		/iso/chroot.sh"
 
 	# Unmount chroot
-	"scripts/unmount.sh" "$@.partial"
+	#"scripts/unmount.sh" "$@.partial"
 
 	# Save package pool
 	sudo mv "$@.partial/iso/pool" "$@.partial/pool"

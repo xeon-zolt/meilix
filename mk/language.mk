@@ -1,16 +1,16 @@
 LANGUAGES=\
-	ar \
-	de \
+	#ar \
+	#de \
 	en \
-	es \
-	fr \
-	it \
-	ja \
-	pt \
-	ru \
-	zh \
-	zh-hans \
-	zh-hant
+	#es \
+	#fr \
+	#it \
+	#ja \
+	#pt \
+	#ru \
+	#zh \
+	#zh-hans \
+	#zh-hant
 
 LANGUAGE_PKGS=\
 	fonts-arphic-ukai \
