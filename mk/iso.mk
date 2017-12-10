@@ -9,7 +9,7 @@ $(BUILD)/iso_create.tag:
 
 $(BUILD)/iso_casper.tag: $(BUILD)/squashfs $(BUILD)/chroot.tag $(BUILD)/live.tag $(BUILD)/iso_create.tag
 	# Remove old casper directory
-	sudo rm -rf "$(BUILD)/iso/casper"
+	#sudo rm -rf "$(BUILD)/iso/casper"
 
 	# Create new casper directory
 	mkdir -p "$(BUILD)/iso/casper"
